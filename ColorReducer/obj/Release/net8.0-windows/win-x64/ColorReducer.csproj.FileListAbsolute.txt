@@ -1,0 +1,16 @@
+C:\Users\master\source\repos\ColorReducer\ColorReducer\bin\Release\net8.0-windows\win-x64\ColorReducer.exe
+C:\Users\master\source\repos\ColorReducer\ColorReducer\bin\Release\net8.0-windows\win-x64\ColorReducer.deps.json
+C:\Users\master\source\repos\ColorReducer\ColorReducer\bin\Release\net8.0-windows\win-x64\ColorReducer.runtimeconfig.json
+C:\Users\master\source\repos\ColorReducer\ColorReducer\bin\Release\net8.0-windows\win-x64\ColorReducer.dll
+C:\Users\master\source\repos\ColorReducer\ColorReducer\bin\Release\net8.0-windows\win-x64\Microsoft.Win32.SystemEvents.dll
+C:\Users\master\source\repos\ColorReducer\ColorReducer\bin\Release\net8.0-windows\win-x64\System.Drawing.Common.dll
+C:\Users\master\source\repos\ColorReducer\ColorReducer\obj\Release\net8.0-windows\win-x64\ColorReducer.csproj.AssemblyReference.cache
+C:\Users\master\source\repos\ColorReducer\ColorReducer\obj\Release\net8.0-windows\win-x64\ColorReducer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\master\source\repos\ColorReducer\ColorReducer\obj\Release\net8.0-windows\win-x64\ColorReducer.AssemblyInfoInputs.cache
+C:\Users\master\source\repos\ColorReducer\ColorReducer\obj\Release\net8.0-windows\win-x64\ColorReducer.AssemblyInfo.cs
+C:\Users\master\source\repos\ColorReducer\ColorReducer\obj\Release\net8.0-windows\win-x64\ColorReducer.csproj.CoreCompileInputs.cache
+C:\Users\master\source\repos\ColorReducer\ColorReducer\obj\Release\net8.0-windows\win-x64\ColorRed.42DA9144.Up2Date
+C:\Users\master\source\repos\ColorReducer\ColorReducer\obj\Release\net8.0-windows\win-x64\ColorReducer.dll
+C:\Users\master\source\repos\ColorReducer\ColorReducer\obj\Release\net8.0-windows\win-x64\refint\ColorReducer.dll
+C:\Users\master\source\repos\ColorReducer\ColorReducer\obj\Release\net8.0-windows\win-x64\ColorReducer.genruntimeconfig.cache
+C:\Users\master\source\repos\ColorReducer\ColorReducer\obj\Release\net8.0-windows\win-x64\ref\ColorReducer.dll

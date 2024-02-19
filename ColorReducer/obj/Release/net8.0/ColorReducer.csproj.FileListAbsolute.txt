@@ -1,0 +1,4 @@
+C:\Users\master\source\repos\ColorReducer\ColorReducer\obj\Release\net8.0\ColorReducer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\master\source\repos\ColorReducer\ColorReducer\obj\Release\net8.0\ColorReducer.AssemblyInfoInputs.cache
+C:\Users\master\source\repos\ColorReducer\ColorReducer\obj\Release\net8.0\ColorReducer.AssemblyInfo.cs
+C:\Users\master\source\repos\ColorReducer\ColorReducer\obj\Release\net8.0\ColorReducer.csproj.CoreCompileInputs.cache

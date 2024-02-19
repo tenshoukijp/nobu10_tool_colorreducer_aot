@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PublishAot>true</PublishAot>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <PackageId>iZYINS ColorReducer</PackageId>
+	  <AssemblyVersion>2.0.0.0</AssemblyVersion>
+	  <FileVersion>2.0.0.0</FileVersion>
+	  <PlatformTarget>x64</PlatformTarget>
+	  <Title>iZYINS ColorReducer</Title>
+	  <Version>2.0.0.0</Version>
+	  <Authors>Copyright © Y.Nomura 2005-2008</Authors>
+	  <Description>Color Reducer on .NET Framework</Description>
+	  <Copyright>Copyright © Y.Nomura 2005-2008</Copyright>
+	  <Product>iZYINS ColorReducer</Product>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Program.cs.orig" />
+    <None Remove="Quant.cs.edit.txt" />
+    <None Remove="Quant.cs.orig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="8.0.2" />
+  </ItemGroup>
+
+</Project>
