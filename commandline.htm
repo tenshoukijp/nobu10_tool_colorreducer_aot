@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="Shift_JIS"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+    <meta name="author" content="N.A." />
+    <title>ColorReducer.exe 1.00 コマンドラインオプション</title>
+    <style>
+        table {
+            padding: 1em;
+            width: 95%;
+            border-collapse: collapse;
+        }
+
+        tr {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        td {
+            border: 1px solid #666;
+            padding: 0.3em;
+            margin: 0px;
+        }
+
+        h1 {
+            background-color: #55c4ff;
+            border-bottom: 2px solid black;
+            padding-left: 0.5em;
+        }
+
+        h2 {
+            background-color: #cccccc;
+            border-width: 0px 0px 2px 16px;
+            border-style: solid;
+            border-color: #666;
+            padding-left: 1em;
+        }
+
+        h3 {
+            background-color: burlywood;
+            border-bottom: 2px solid black;
+        }
+
+        li {
+            line-height: 200%;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 1em;
+            margin: 1em;
+            display: block;
+            font-size: large;
+        }
+
+        pre {
+            background-color: #eee;
+            padding: 1em;
+            margin: 1em;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ColorReducer.exe 1.00 コマンドラインオプション</h1>
+    <h2>コマンドラインオプションについて</h2>
+    <pre>
+Usage:
+    ColorReducer.exe INPUT.png
+    ColorReducer.exe INPUT.png OUTPUT.png
+    ColorReducer.exe INPUT.png OUTPUT.png -P16 -D4
+    ColorReducer.exe INPUT.png OUTPUT.png -P16 -D4 -FdefPalette.png
+    </pre>
+    <ul>
+        <li>第１引数は必ず元ファイル名が入ります。</li>
+        <li>第２引数以降は省略可能ですが、出力先ファイル名を指定する場合は、必ず第２引数に置いてください。</li>
+        <li>元ファイルと出力先ファイル以外の指定を行う引数は、全て'-B1'の様に、-と大文字アルファベット、そしてその後につながるオプションの設定内容から成立します。</li>
+        <li>オプションとオプションの間は、必ず、半角空白1文字を入れて下さい。</li>
+        <li>コマンドプロンプトに慣れている方なら言うまでもないことですが、オプションの内容がファイルパス等で、空白が入るときは、その引数を""で括って下さい。</li>
+
+    </ul>
+    <p>
+        以下に各オプションの詳細を記載します。
+    </p>
+    <table summary="option">
+        <tr>
+            <td>オプション</td>
+            <td>説明</td>
+            <td>省略時</td>
+            <td>サンプル</td>
+        </tr>
+
+        <tr>
+            <td>第１引数</td>
+            <td>
+                <ul>
+                    <li>変換元ファイルパスを指定します。</li>
+                    <li>絶対パスを使ってください。</li>
+                    <li>変換元はWindows Bitmap・JPEG・PNG・GIF・TIFFに対応しています。</li>
+                    <li>JPEG・PNG・GIF・TIFFの場合は、それぞれ適切な拡張子を持ったファイルにしてください。</li>
+                </ul>
+            </td>
+            <td>プログラムを終了します。</td>
+            <td>"d:\src\source.png"</td>
+        </tr>
+
+        <tr>
+            <td>第２引数専用（省略可）</td>
+            <td>
+                <ul>
+                    <li>変換先ファイルパスを指定します。</li>
+                    <li>絶対パスを使用してください。</li>
+                    <li>Windows Bitmap・PNG・GIF・TIFFに対応していますが、PNG・GIF・TIFFで書き出したい場合には、拡張子を.png .gif .tif .tiffのいずれかにしてください。大文字でも構いません。</li>
+                </ul>
+            </td>
+            <td>入力元ファイルと同じフォルダで現在存在しない名前を作ります。</td>
+            <td>"d:\dest\new.png"</td>
+        </tr>
+
+        <tr>
+            <td colspan="4">以下第２引数以降専用</td>
+        </tr>
+
+        <tr>
+            <td>-P</td>
+            <td>減色の結果生成されるパレットの色数を指定します。<br>2～256の間で指定して下さい。<br>範囲外の数字は無視します。</td>
+            <td>-P256と入力するのと同等</td>
+            <td>-P4</td>
+        </tr>
+
+        <tr>
+            <td>-D</td>
+            <td>ディザモードを指定します。
+                <ul>
+                    <li>0 : なし</li>
+                    <li>1 : gPeanos</li>
+                    <li>2 : 誤差拡散</li>
+                    <li>3 : 平均誤差</li>
+                    <li>4 : アニメ</li>
+                </ul>
+                これ以外の数字は無視します。
+            </td>
+            <td>-D2と入力するのと同等</td>
+            <td>-D3</td>
+        </tr>
+        <tr>
+            <td>-L</td>
+            <td>ディザの強さを指定します。0～10の間で指定して下さい。大きいほど強くなります。範囲外の数字は無視します。</td>
+            <td>-L8と入力するのと同等</td>
+            <td>-L10</td>
+        </tr>
+        <tr>
+            <td>-Y</td>
+            <td>Yellow-Blueの色空間の広さを指定します。0～20の間で指定して下さい。大きいほど空間をのばします。範囲外の数字は無視します。</td>
+            <td>-Y10と入力するのと同等</td>
+            <td>-Y4</td>
+        </tr>
+        <tr>
+            <td>-C</td>
+            <td>Cyan-Redの色空間の広さを指定します。0～20の間で指定して下さい。大きいほど空間をのばします。範囲外の数字は無視します。</td>
+            <td>-C10と入力するのと同等</td>
+            <td>-C17</td>
+        </tr>
+        <tr>
+            <td>-G</td>
+            <td>Green-Magentaの色空間の広さを指定します。0～20の間で指定して下さい。大きいほど空間をのばします。範囲外の数字は無視します。</td>
+            <td>-G10と入力するのと同等</td>
+            <td>-G5</td>
+        </tr>
+
+        <tr>
+            <td>-O</td>
+            <td>出力精度（表示環境差吸収度）を指定します。xPadieにおける出力精度指定と同等です。
+                <ul>
+                    <li>0:Web</li>
+                    <li>1:332（xPadieでは非表示）</li>
+                    <li>2:333（xPadieでは非表示）</li>
+                    <li>3:444</li>
+                    <li>4:555</li>
+                    <li>5:565</li>
+                    <li>6:666</li>
+                    <li>7:777</li>
+                    <li>8:888</li>
+                </ul>
+                これ以外の数値は無視されます。<br>Padieのドキュメントによると、「Web用途等ハイカラー環境を含める場合は「555」に設定してください。」とのことです。この設定は、ここでは-O4に相当します。
+            </td>
+            <td>-O8と入力するのと同等</td>
+            <td>-O3</td>
+        </tr>
+        <tr>
+            <td>-I</td>
+            <td>入力精度を指定します。
+                <ul>
+                    <li>5:5ビット</li>
+                    <li>6:6ビット</li>
+                    <li>7:7ビット</li>
+                    <li>8:8ビット</li>
+                </ul>
+                -I8以外を選択する必要は無いようです。範囲外の数値は無視されます。
+            </td>
+            <td>-I8と入力するのと同等</td>
+            <td>-I8</td>
+        </tr>
+        <tr>
+            <td>-A</td>
+            <td>パレットに透過色用の一色を用意するか設定します。
+                <ul>
+                    <li>0 : 用意しない</li>
+                    <li>1 : 透過色を元画像の左上ピクセルの色とする。</li>
+                    <li>2 : 同左下</li>
+                    <li>3 : 同右上</li>
+                    <li>4 : 同右下</li>
+                </ul>
+                範囲外の数字は無視されます。
+            </td>
+            <td>-A0と入力した場合と同等です。</td>
+            <td>-A0</td>
+        </tr>
+        <tr>
+            <td>-R</td>
+            <td>-Fで指定したファイルパスに既にファイルが存在する場合、上書きを許可するか指定します。
+                <ul>
+                    <li>0：上書きをせず終了</li>
+                    <li>1：上書き許可</li>
+                </ul>それ以外の数値は無視されます。
+            </td>
+            <td>-R0と同等です。</td>
+            <td>-R0</td>
+        </tr>
+        <tr>
+            <td>-B</td>
+            <td>出力フォーマットを選択します。
+                <ul>
+                    <li>0:Windows BMP</li>
+                    <li>1:PNG（最高圧縮設定）</li>
+                    <li>2:GIF</li>
+                </ul>
+                その他の数値は無視されます。
+            </td>
+            <td>-B1と入力する場合と同等です。</td>
+            <td>-B1</td>
+        </tr>
+
+        <tr>
+            <td>-H</td>
+            <td>-Hの直後にパレットカラービットマップファイルの絶対パスを置くと、そのパレットカラービットマップファイルのパレットカラーを読み込み、減色後の画像のパレットにそのパレットを追加します。<br>ファイルの絶対パスに半角スペースが入る場合は、オプションを二重引用符で括ってください。</td>
+            <td>（-Hオプション無し）</td>
+            <td>"-HD:\a b\c.bmp"</td>
+        </tr>
+
+        <tr>
+            <td>-F</td>
+            <td>-Fの直後にパレットカラービットマップファイルの絶対パスを置くと、そのパレットカラービットマップファイルのパレットカラーを読み込み、減色後の画像のパレットをそれと全く同じにします。<br>この場合、上記の各種オプションで無効になるものがあります。<br>ファイルの絶対パスに半角スペースが入る場合は、オプションを二重引用符で括ってください。</td>
+            <td>（-Fオプション無し）</td>
+            <td>"-FD:\a b\c.bmp"</td>
+        </tr>
+
+        <tr>
+            <td>-Q</td>
+            <td>-Q1が指定されたときのみ、このプログラムのコピーライトについての表示がされるオプションですが、現在未実装です。<br>このオプションは第2引数以降専用です。<br>第1引数は、ダミーでもいいので、画像ファイルを指定しないといけません。</td>
+            <td>-Q0</td>
+            <td>-Q1</td>
+        </tr>
+
+        <tr>
+            <td>-T</td>
+            <td>-T1が指定されたときのみ、出力ファイルと同じフォルダにiZYINS.logという名前で、処理時間を記録したログファイルが出力されるようになります。</td>
+            <td>-T0</td>
+            <td>-T1</td>
+        </tr>
+
+
+    </table>
+    <h3>コマンドサンプル</h3>
+    <p>
+        出来るだけ少ないオプションで、減色を実行しようとした場合は、以下のようにプロンプトを打ちます。<br />
+        <code>
+            ColorReducer.exe "C:\program files\sample.bmp"
+        </code>
+        この場合、以下のコマンドラインと同じ意味になります。<br>
+        <code>
+            ColorReducer.exe "C:\program files\sample.bmp" -P256 -D2 -L8 -Y10 -C10 -G10 -O8 -I8 -A0 -R0 -B0
+        </code><br />
+    </p>
+</body></html>
